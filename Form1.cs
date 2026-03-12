@@ -132,7 +132,28 @@ namespace PraktikumADO
             }
         }
 
-       
+        private void btnHasil_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                koneksi();
+                conn.Open();
+                string query = "UPDATE Prodi SET MataKuliah='Manajemen Informatika' WHERE KodeMK='MI01'";
+                cmd = new SqlCommand(query, conn);
+                int hasil = cmd.ExecuteNonQuery();
+                MessageBox.Show("Jumlah baris terpengaruh : " + hasil);
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+    }
+
+}
 
 
 
