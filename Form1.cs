@@ -9,4 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+namespace PraktikumADO
+{
+    public partial class Form1 : Form
+    {
+        SqlConnection conn;
+        SqlCommand cmd;
+        private void koneksi()
+        {
+            conn = new SqlConnection(
+                "Data Source=DEREK-PC\\DEREKGANTENG;Initial Catalog=DBAkademikADO;Integrated Security=True"
+                );
+
+        }
+       
+
+
 
