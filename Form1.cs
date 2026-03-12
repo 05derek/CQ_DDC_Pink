@@ -25,7 +25,22 @@ namespace PraktikumADO
         public Form1()
         {
             InitializeComponent();
-        } 
+        } private void btnConnect_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                koneksi();
+                conn.Open();
+                MessageBox.Show("Koneksi ke database berhasil");
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        
 
 
 
