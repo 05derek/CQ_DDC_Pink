@@ -22,7 +22,10 @@ namespace PraktikumADO
                 );
 
         }
-       
+        public Form1()
+        {
+            InitializeComponent();
+        } 
 
 
 
